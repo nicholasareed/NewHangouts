@@ -1,4 +1,17 @@
 <?php 
+function grab_users() {
+	$query = mysql_query("SELECT * FROM `users`");
+	while ($user = mysql_fetch_assoc($query)) {
+		echo '<div class="btn-group">
+  <a class="btn btn-primary" href="http://localhost/Hangouts/'.$user['username'].'"><i class="icon-user icon-white"></i>'.$user['username'].'</a>
+  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href=""><span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    
+  </ul>
+</div>';
+	}
+}
+
 function censor($uncensored_string) {
 		$badwords = array('goddamn', 'fuck', 'hell', 'damn', 'shit', 'bullshit');
 		$goodwords = array('gosh darn', '', 'heck', 'darned', 'crap', 'BS');

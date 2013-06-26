@@ -5,6 +5,6 @@ admin_protect();
 <h1>Admininstrator Control Panel</h1>
 <hr>
 <h3>Users</h3>
-
+<?php grab_users(); ?>
 <?php require('mass-email.php'); ?>
 <?php  include('includes/overall/footers/footer.php'); ?>
