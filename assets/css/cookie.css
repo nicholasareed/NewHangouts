@@ -1,0 +1,36 @@
+.cookie-banner a{
+	color: slategrey;
+	text-decoration: none;
+}
+
+.cookie-banner a:hover{
+	color: #fff;
+}
+
+.cookie-btn{
+	background: #ccc;
+	color: #333;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 5px;
+	display: inline-block;
+	border: 1px solid #aaa;
+	border-bottom: 2px solid #aaa;
+}
+
+.cookie-banner{
+	display: none;
+	background: #333;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100000;
+}
+
+.cookie-banner .container{
+	margin: 0 auto;
+	width: 70%;
+	color: #f0f0ee;
+	padding: 15px;
+}

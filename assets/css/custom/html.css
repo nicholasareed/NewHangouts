@@ -1,0 +1,38 @@
+body{
+	font-size: 1em;
+	font-family: 'Oxygen', sans-serif;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+
+p:first-letter {
+       text-transform: capitalize;
+}
+
+.clear-clearfix{
+	display: inline-block;
+}
+
+[href~=images/profile]{
+	width: 30px;
+	height: 30px;
+}
+
+
+.quick-links li{
+	line-height: 160%	
+}
+
+
+.full-sized{
+	width: 95%;
+}
+
+.instamessage{
+	text-indent: 50px;
+}
+
+a{
+	cursor: pointer;
+}
