@@ -10,15 +10,12 @@
 						<!-- <p class="navbar-text pull-right">
 							Signed in as <a href="" class="navbar-link">Ashwin</a>
 						</p> -->
-					<ul class="nav pull-left">
-						<li><a href="index.php">Home</a></li>
-						<li class="active"><a href="sign-in.php">Sign In</a></li>
-						<li><a href="sign-up.php">Sign Up</a></li>
-						<li><a href="apps.php">Applications</a></li>
-					</ul>
-						<form class="navbar-search pull-right">
-  							<input type="text" class="search-query" placeholder="Search">
-						</form>
+						<ul class="nav pull-left">
+							<li><a href="index.php">Home</a></li>
+							<li class="active"><a href="sign-in.php">Sign In</a></li>
+							<li><a href="sign-up.php">Sign Up</a></li>
+							<li><a href="apps.php">Applications</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -44,6 +41,7 @@
 
 					<button type="submit" class="btn btn-primary">Sign In</button>
 			</form>
+			<p>Forgot <a href="recover.php?mode=username">username</a> or <a href="recover.php?mode=password">password</a>?</p>
 		</div>
 	</div>
 

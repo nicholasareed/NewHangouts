@@ -8,11 +8,14 @@
 			<fieldset>
 				<legend>Instantly share a message</legend>
 				<textarea name="message" class="full-sized" required></textarea>
-			</fieldset>
+			</fieldset><br>
 			<button type="submit" class="btn btn-info">Send Message</button>
 		</form>
 	</div>
 	<div class="modal-footer">
-		<button class="btn btn-info" data-dismiss="modal" aria-hidden="true">Close</button>    
+		<div class="btn-group">
+			<a href="instantshare.php" class="btn btn-info">View Posts</a>
+			<button class="btn btn-info" data-dismiss="modal" aria-hidden="true">Close InstaShare</button>    
+		</div>
 	</div>
 </div>

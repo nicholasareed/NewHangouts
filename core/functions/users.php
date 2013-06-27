@@ -1,4 +1,8 @@
 <?php 
+function promote($to, $name) {
+	mysql_query("UPDATE `users` SET `type` = $to WHERE `username` = '$name'");
+}
+
 function get_users() {
 	$users = mysql_query("SELECT * FROM `users`");
 	
@@ -193,6 +197,7 @@ function login($username, $password){
 	$password 	= encrypt($password);
 
 	if (mysql_result(mysql_query("SELECT COUNT(`user_id`) FROM `users` WHERE `username` = '$username' and `password` = '$password'"),0) == 1) {
+		mysql_query("UPDATE `users` SET `online` = 1 WHERE `username` = '$username' and `password` = '$password'");
 		return $user_id;
 	} else{
 		return false;

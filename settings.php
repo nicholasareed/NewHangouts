@@ -90,6 +90,7 @@ if (empty($_POST) == false and empty($errors) == true) {
 						}
 					 ?>
 				</select>
+				<span class="help-block">We reccomend Bootstrap, Cerulean, Cosmo, Nightwing and Spacelab</span>
 			</div>
 		</div>
 		<div class="control-group">

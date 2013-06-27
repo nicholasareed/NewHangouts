@@ -20,10 +20,7 @@
 			<div class="well sidebar-nav">
 				<ul class="nav nav-list">
 					<li class="nav-header">Sidebar</li>
-					<li><a href="#intro">Introduction</a></li>
-					<li><a href="#description">What is Hangouts?</a></li>
-					<li><a href="#features">Features</a></li>
-					<li><a href="#team">The Team</a></li>
+					<li><a href="about.php">About Us</a></li>
 				</ul><br>
 			</div>
 			<?php if (signed_in() == false) {
@@ -42,8 +39,9 @@
 			<br><br><br>
 			<div class="hero-unit">
 				<h1>Welcome to Hangouts!</h1>
-				<p class="lead">Hangouts is a social network web app that takes some of the best of the web has to offer</p>
-				<a href="sign-in" class="btn btn-large btn-info">Sign In</a>
+				<p class="lead">Hangouts is a social network web app that takes some of the best technologies the web has to offer</p>
+				<a href="#myModal" data-toggle="modal" class="btn btn-info btn-large">Sign In</a>
+				<?php include('quick-sign-in.php'); ?>
 			</div>
 		</div>
 	</div>

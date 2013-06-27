@@ -14,13 +14,18 @@ if (empty($_POST) == false) {
 	$errors[] = "All fields are required";
 }
  ?>
-<form action="" method="post">
+<form action="new_conversation.php" method="post">
 	<fieldset>
 		<legend>Start a new conversation</legend>
 		<div class="control-group">
 			<div class="control-label"><label for="">To: </label></div>
 			<div class="controls">
-				<input type="text" required name="to">
+				<input type="text" required name="to" list="usernames">
+				<!-- <select name="to" id="">
+					<?php 
+					grab_users2();
+					 ?>
+				</select> -->
 			</div>
 		</div>
 		<div class="control-group">

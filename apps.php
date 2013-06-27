@@ -26,8 +26,8 @@
 			  			<li class="span3">
 			    				<div class="thumbnail">
 			      					<!-- <img src="" alt=""> -->
-			      					<h3>InstaShare</h3>
-			      					<p>InstaShare is a fast way.</p>
+			      					<h3></h3>
+			      					<p></p>
 				  				<a class="btn" href="">Visit</a>
 			    				</div>
 			  			</li>

@@ -1,20 +1,64 @@
 <?php 
+function avg(){
+ 	$count = func_num_args();
+ 	$args = func_get_args();
+ 	return (array_sum($args) / $count);
+}
+
+
+function online_users() {
+	$query = mysql_query("SELECT `username`, `first_name`, `last_name` FROM `users` WHERE `online` = 1");
+	$query2 = mysql_query("SELECT COUNT(`user_id`) FROM `users` WHERE `online` = 1");
+	if (mysql_result($query2, 0) > 1) {
+		echo "<ul>";
+			while ($user = mysql_fetch_assoc($query)) {
+				if ($user['username'] == $user_data['username']) {
+					echo "";
+				} else {
+					echo "<li>".$user['username']."</li>";
+				}
+			}
+		echo "</ul>";
+	} else {
+		echo "Hm...It looks like there are no other users that seem to be online";
+	}
+	
+	
+}
+
+
 function grab_users() {
 	$query = mysql_query("SELECT * FROM `users`");
 	while ($user = mysql_fetch_assoc($query)) {
-		echo '<div class="btn-group">
-  <a class="btn btn-primary" href="http://localhost/Hangouts/'.$user['username'].'"><i class="icon-user icon-white"></i>'.$user['username'].'</a>
+		$promote = $user['type'] + 1 ;
+		echo '<div class="span4">
+		<div class="btn-group">
+  <a class="btn btn-primary" href="http://localhost/Hangouts/'.$user['username'].'">'.$user['username'].'</a>
   <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href=""><span class="caret"></span></a>
   <ul class="dropdown-menu">
-    
+   <li>'.$user['username'].' is a level '.$user['type'].'</li>
+   <li class="divider"></li>
+   <li><a href="admin.php?promote_to=0&name='.$user['username'].'"><span class="icon-ban-circle"></span>Pro/Demote to level 0</a></li>
+   <li><a href="admin.php?promote_to=1&name='.$user['username'].'"><span class="icon-eye-close"></span>Pro/Demote to level 1</a></li>
+   <li><a href="admin.php?promote_to=2&name='.$user['username'].'"><span class="icon-user"></span>Pro/Demote to level 2</a></li>
+   <li><a href="admin.php?promote_to=3&name='.$user['username'].'"><span class="icon-eye-open"></span>Pro/Demote to level 3</a></li>
+   <li><a href="admin.php?promote_to=4&name='.$user['username'].'"><span class="icon-globe"></span>Pro/Demote to level 4</a></li>
   </ul>
-</div>';
+</div></div><br><br>';
 	}
 }
 
+function grab_users2() {
+	$query = mysql_query("SELECT * FROM `users`");
+	while ($user = mysql_fetch_assoc($query)) {
+		echo "<option value=".$user['username'].">".$user['username']."</option>";		
+	}
+}
+
+
 function censor($uncensored_string) {
-		$badwords = array('goddamn', 'fuck', 'hell', 'damn', 'shit', 'bullshit');
-		$goodwords = array('gosh darn', '', 'heck', 'darned', 'crap', 'BS');
+		$badwords = array('goddamn', 'fuck', 'hell', 'damn', 'shit');
+		$goodwords = array('gosh darn', '', 'heck', 'darned', 'crap');
 		$censored_string = str_replace($badwords, $goodwords, $uncensored_string);
 		return $censored_string;
 	

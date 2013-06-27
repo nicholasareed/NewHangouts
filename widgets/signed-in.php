@@ -12,5 +12,6 @@ $template->assign('theme', $user_data['theme']);
 $template->assign('type', $user_data['type']);
 $template->assign('profile', $user_data['profile']);
 $template->assign('id', $session_user_id);
+$template->assign('inbox', inbox($user_data['username']));
 $template->render('widgets/cp.php');
  ?>

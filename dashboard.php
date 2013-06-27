@@ -25,7 +25,7 @@ if (empty($_POST) === false) {
 		}
 	}
 } else if(signed_in() == false){
-	$errors[]	= "Go the sign in page first before coming here";
+	$errors[]	= "Go to the sign in page first before coming here";
 }
  ?>
 <?php output_errors($errors); ?>

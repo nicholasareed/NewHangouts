@@ -4,3 +4,8 @@ David Melisso
 Austin Hou
 Nikhil Dharmaraj
 Andrew Chang
+
+And a special shoutout and thanks/kudos to
+Twitter Bootstrap,
+Glyphicons,
+and the Design Us All Blog for the idea on Controversy

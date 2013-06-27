@@ -36,3 +36,7 @@ p:first-letter {
 a{
 	cursor: pointer;
 }
+
+.verticalLine {
+    border-left: thick solid #ff0000;
+}

@@ -1,4 +1,3 @@
-<hr>
 <?php 
 if (isset($_GET['success'])) {
 	echo alert_message('The mail has been sent successfully','success');

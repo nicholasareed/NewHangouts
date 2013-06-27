@@ -1,4 +1,6 @@
-<?php include('includes/overall/headers/header.php'); ?>
+<?php include('includes/overall/headers/header.php'); 
+protect_page_backup();
+?>
 <?php 
 if (isset($_POST['message'])) {
 	if (empty($_POST['message']) == true) {
@@ -18,6 +20,7 @@ if (isset($_POST['message'])) {
 }
 
 output_instashared('timestamp', 'name', 'email', 'message');
+
 
  ?>
 <?php include('includes/overall/footers/footer-app.php'); ?>

@@ -63,28 +63,37 @@
 		</div>
 		<div class="span6">
 			<div class="well">
-				
+				<h3>Online Users</h3>
+				<?php online_users(); ?>
 			</div>
 		</div>
 	</div>
 	<div class="span2 sidebar-nav">
-		<small>Quick Bar</small>
+		<!-- <small>Quick Bar</small> -->
 		<h3>Hello, [first-name]</h3>
-		<p>Quick Links</p>
+		<!-- <p>Links</p> -->
+		<p>Quick Actions</p>
 		<nav>
-			<ul class="quick-links">
-				<li><a href="#myModal" data-toggle="modal">InstaShare</a></li>
+			<ul class="quick-links nav nav-list">
+				<li><a href="#myModal" data-toggle="modal"><span class="icon-comment"></span> InstaShare</a></li>
 				<?php require('instashare.php'); ?>
-				<li><a href="settings.php">User Settings</a></li>
-				<li><a href="change-password.php">Change Password</a></li>
-				<li><a href="sign-out.php">Sign Out</a></li>
+				<li><a href="settings.php"><span class="icon-cog"></span> Settings</a></li>
+				<li><a href="change-password.php"><span class="icon-lock"></span> Change Password</a></li>
 				<li>
 					Messages
 					<ul>
-						<li><a href="inbox.php">Inbox</a></li>
-						<li><a href="new_conversation.php">New Message</a></li>
+						<li><span class="icon-inbox"></span><a href="inbox.php">Inbox </a> ([inbox])</li>
+						<li><span class="icon-plus"></span><a href="new_conversation.php">New Message</a></li>
 					</ul>
 				</li>
+				<li>
+					Debate
+					<ul>
+						<li><span class="icon-plus"></span><a href="new_debate.php">Start a debate</a></li>
+						<li><span class="icon-thumbs-up"></span><a href="debates.php">Vote on debates</a></li>
+					</ul>
+				</li>
+				<li><a href="sign-out.php">Sign Out</a></li>
 			</ul>
 		</nav>
 		<hr>
