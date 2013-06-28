@@ -26,12 +26,21 @@
 	</div><br><br>
  <div class="row-fluid">
 	<div class="span10">
-		<div class="well">
-			<h3>Your Dashboard</h3>
-			<p class="inline"></p>
-		</div>
-		<div class="span4">
-			<div class="well">
+		<div class="tabbable tabs-left" data-step="9" data-intro="Switch between mulltiple tabs for the main view">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#tab1" data-toggle="tab">Your Dashboard</a></li>
+				<li><a href="#tab2" data-toggle="tab">Upload New Profile Image</a></li>
+				<li><a href="#tab3" data-toggle="tab">Online Users</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="tab1">
+					<!-- <div class="well"> -->
+						
+
+					<!-- </div> -->
+				</div>
+				<div class="tab-pane" id="tab2">
+					<!-- <div class="well"> -->
 				<div class="profile">
 					<?php 
 					if (isset($_FILES['profile']) == true) {
@@ -53,20 +62,33 @@
 						}
 					}
 					 ?>
-				 <form action="" method="post" enctype="multipart/form-data">
+				 <form action="" method="post" enctype="multipart/form-data" >
 				 	<p>Upload a profile image</p>
-				 	<input type="file" name="profile" required><br>
+				 	<!-- <div id="drop">
+				 		Drop Here
+
+
+				 		<a>Browse</a> -->
+				 		<input type="file" name="profile" required><br>
+				 	<!-- </div> -->
+				 	<!-- <ul>
+				 		
+				 	</ul> -->
 					<button type="submit" class="btn btn-primary btn-small">Update</button>
 				</form>
+
 			</div>
+			<!-- </div> -->
+				</div>
+				<div class="tab-pane" id="tab3">
+					<!-- <div class="well"> -->
+						<h3>Online Users</h3>
+						<?php online_users(); ?>
+					<!-- </div> -->	
+				</div>
 			</div>
-		</div>
-		<div class="span6">
-			<div class="well">
-				<h3>Online Users</h3>
-				<?php online_users(); ?>
-			</div>
-		</div>
+			
+		</div>	
 	</div>
 	<div class="span2 sidebar-nav">
 		<!-- <small>Quick Bar</small> -->
@@ -75,31 +97,35 @@
 		<p>Quick Actions</p>
 		<nav>
 			<ul class="quick-links nav nav-list">
-				<li><a href="#myModal" data-toggle="modal"><span class="icon-comment"></span> InstaShare</a></li>
+				<li><a href="#myModal" data-toggle="modal" data-step="1" data-intro="Share a message quickly and easily" data-position="left"><span class="icon-comment"></span> InstaShare</a></li>
 				<?php require('instashare.php'); ?>
-				<li><a href="settings.php"><span class="icon-cog"></span> Settings</a></li>
-				<li><a href="change-password.php"><span class="icon-lock"></span> Change Password</a></li>
+				<li><a data-step="2" data-intro="Change your user settings" data-position="left" href="settings.php"><span class="icon-cog"></span> Settings</a></li>
+				<li><a data-step="3" data-intro="Change your password if you think your account might be hacked" data-position="left"  href="change-password.php"><span class="icon-lock"></span> Change Password</a></li>
 				<li>
 					Messages
 					<ul>
-						<li><span class="icon-inbox"></span><a href="inbox.php">Inbox </a> ([inbox])</li>
-						<li><span class="icon-plus"></span><a href="new_conversation.php">New Message</a></li>
+						<li data-step="4" data-intro="Check your inbox for any messages" data-position="left"><span class="icon-inbox"></span><a href="inbox.php">Inbox </a> ([inbox])</li>
+						<li data-step="5" data-intro="Send a private message to one other user" data-position="left"><span class="icon-plus"></span><a href="new_conversation.php">New Message</a></li>
 					</ul>
 				</li>
 				<li>
 					Debate
 					<ul>
-						<li><span class="icon-plus"></span><a href="new_debate.php">Start a debate</a></li>
-						<li><span class="icon-thumbs-up"></span><a href="debates.php">Vote on debates</a></li>
+						<li data-step="6" data-intro="Start a two-sided debate. Other users can support a side" data-position="left"><span class="icon-plus"></span><a href="new_debate.php">Start a debate</a></li>
+						<li data-step="7" data-intro="Vote on a debate. One vote can make all the difference" data-position="left"><span class="icon-thumbs-up"></span><a href="debates.php">Vote on debates</a></li>
 					</ul>
 				</li>
-				<li><a href="sign-out.php">Sign Out</a></li>
+				<li data-step="8" data-intro="When you're done checking your account, sign out" data-position="left"><a href="sign-out.php">Sign Out</a></li>
 			</ul>
+			<a href="#" class="btn btn-primary btn-block tour-start">Tour?</a>
 		</nav>
 		<hr>
 		<h4>My profile picture</h4>
 		<!-- <h6>[profile]</h6> -->
-		<img src=[profile]>
+		<div class="side-corner-tag">
+			<img src=[profile] data-step="10" data-intro="If you want, you can change your profile pic :)" data-position="left">
+			<p><span>Profile</span></p>
+		</div>
 		<hr>
 		<!-- <a href="report.php" class="btn-warning"></a> -->
 	</div>

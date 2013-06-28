@@ -18,6 +18,9 @@ function change_profile_image($user_id, $file_temp_location, $file_extn){
 	$file_path .= $file_name;
 	$file_path .= $file_extn;
 	move_uploaded_file($file_temp_location, $file_path);
+	// $resizeObj = new resize($file_temp_location);  
+	// $resizeObj -> resizeImage(150, 100, 'crop');  
+	// $resizeObj -> saveImage($file_path, 100);  
 	mysql_query("UPDATE `users` SET `profile` = '".$file_path."' where `user_id` = ".$user_id);
 
 }

@@ -7,11 +7,13 @@ if (isset($_POST['message'])) {
 		$errors[] = "You can't have an empty message";
 	}
 	if (empty($errors)) {
+		$message = nl2br(censor(clean($_POST['message'])));
 		$instashare_data = array(
 		"name" 		=> $user_data['username'],
 		"email"			=> $user_data['email'],	
-		"message" 		=> censor(clean($_POST['message'])),
+		"message" 		=> $message,
 		"timestamp"		=> time()
+		// "tags" 			=> $tags
 		);
 		instashare($instashare_data);
 	} else{

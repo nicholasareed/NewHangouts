@@ -1,10 +1,9 @@
-<?php include('includes/overall/headers/header.php'); ?>
+<?php include('includes/overall/headers/header-dash.php'); ?>
 <?php 
 if (empty($_POST) === false) {
 	// If we have data to work with, we want to make sure it is safe to pass it into our database
 	$username	= clean($_POST['username']);
 	$password	= clean($_POST['password']);
-
 	// Checks to make sure that the person is good to sign in
 	if (empty($username) or empty($password)) {
 		$errors[]	= "You need to enter a username and a password.";
@@ -33,7 +32,7 @@ if (empty($_POST) === false) {
 if (empty($errors)) {
 	
 	if (isset($_GET['first-time'])) {
-		echo "Loading...Please Wait";
+		echo '<div class="bar"><i class="sphere"></i></div>';
 		?>
 		<script type="text/javascript">
 			window.location.replace("http://localhost/Hangouts/dashboard.php");
@@ -44,4 +43,4 @@ if (empty($errors)) {
 	}
 }
 ?>
-<?php include('includes/overall/footers/footer.php'); ?>
+<?php include('includes/overall/footers/footer-dash.php'); ?>

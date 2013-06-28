@@ -8,5 +8,7 @@
 		<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 		<script type="text/javscript" src="assets/js/chat.js"></script>
+		<script type="text/javascript" src="assets/js/script.js"></script>
+		<script type="text/javascript" src="assets/js/lettering.js"></script>
 	</body>
 </html>

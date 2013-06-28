@@ -22,14 +22,13 @@
 			</div><br><br>
 			<div class="row-fluid">
 				<div class="span12">
-					<ul class="thumbnails">
+					<ul class="thumbnails">			  			
 			  			<li class="span3">
-			    				<div class="thumbnail">
-			      					<!-- <img src="" alt=""> -->
-			      					<h3></h3>
-			      					<p></p>
-				  				<a class="btn" href="">Visit</a>
-			    				</div>
+			  				<div class="thumbnail">
+			  					<h3></h3>
+			  					<p></p>
+			  					<a href=""></a>
+			  				</div>
 			  			</li>
 					</ul>
 				</div>

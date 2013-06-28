@@ -163,7 +163,7 @@ function output_errors($errors){
 // This file contains all general functions
 function clean($string){
 	// Clean the string with different sanitizing functions
-	$clean_string = htmlentities(mysql_real_escape_string(trim(stripslashes($string))));
+	$clean_string = mysql_real_escape_string(stripslashes($string));
 	// Return the cleansed string
 	return $clean_string;
 }

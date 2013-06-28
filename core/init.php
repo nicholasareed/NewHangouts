@@ -5,6 +5,7 @@ session_start();
 // // // This file links to all core functionality so that each page can be connected to the core 
 require('database/connect.php');
 require('functions/number-to-word.php');
+require('functions/resize-class.php');
 require('functions/general.php');
 require('functions/users.php');
 require('functions/apps.php');

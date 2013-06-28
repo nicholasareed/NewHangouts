@@ -82,7 +82,7 @@ function output_messages($username) {
 	$messages = mysql_query("SELECT * FROM `messages` WHERE `to` = '$username' and `deleted` = 0 and `read` = 0");
 	$inbox = inbox($username);
 	if ($inbox == 0) {
-		echo "Your inbox is empty!";
+		echo "<center>You have no new messages. Enjoy your day :) </center>";
 	} else {
 	echo '
 		<form method="post" action="inbox.php?read">
