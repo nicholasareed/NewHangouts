@@ -104,14 +104,13 @@
 					<div class="control-group">
 						<div class="control-label"><label for="">Password:</label></div>
 						<div class="controls">
-							<input value="<?php if (isset($_POST['password'])) {echo $_POST['password'];}?>" required type="password" name="password">
+							<input value="<?php if (isset($_POST['password'])) {echo $_POST['password'];}?>" required type="password" name="password" id="password" min="6">
 						</div>
 					</div>
 					<span class="help-block">By signing up, you agree to the <?php include('terms.php'); ?></span><br>
 				</fieldset>
-
 					<button type="submit" class="btn btn-primary">Sign Up</button>
 			</form>
 		</div>
 	</div>
-<?php include('includes/overall/footers/footer.php'); ?>
+<?php include('includes/overall/footers/footer-register.php'); ?>

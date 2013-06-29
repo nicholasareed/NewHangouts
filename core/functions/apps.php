@@ -95,6 +95,12 @@ function inbox($username) {
 	return $result;
 }
 
+function delete_message($id) {
+	$id 	= (int)$id;
+	mysql_query("UPDATE `messages` SET `deleted` = 1 WHERE `id` = $id");
+}
+
+
 function mark_as_read($id) {
 	$id 	= (int)$id;
 	mysql_query("UPDATE `messages` SET `read` = 1 WHERE `id` = $id");
@@ -181,14 +187,14 @@ function output_instashared() {
 			<div class="span6">
 				<div class="well message">
 					<a>'.$instashare_data['name'].'</a><br>
-					<small>'.$instashare_data['timestamp'].'</small><br>
+					<small><time>'.$instashare_data['timestamp'].'</time></small><br>
 					<div class="instamessage">'.$instashare_data['message'].'</div>
 					<div class="other"><hr>
 						<!-- <button type="button" class="btn btn-primary" data-toggle="button">Like this post</button> -->
 						<div class="btn-group">
 							<a class="btn btn-primary btn-mini dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><span class="icon-thumbs-up"></span><a href="like.php?id='.$instashare_data['id'].'">Like this post</a></li>
+								<li><a href="like.php?id='.$instashare_data['id'].'">Like this post</a></li>
 							</ul>
 						</div>
 						Likes: '.$instashare_data['likes'].'

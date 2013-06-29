@@ -1,4 +1,4 @@
-<?php include('includes/overall/headers/header.php');
+<?php include('includes/overall/headers/header-settings.php');
 protect_page_backup();
  ?>
  <?php 
@@ -38,7 +38,8 @@ if (empty($_POST) == false and empty($errors) == true) {
 		"email"		=> $_POST['email'],
 		"allow_email"	=> $allow_email,
 		"theme"	=> $_POST['theme'],
-		"bio"		=> $_POST['bio']		
+		"bio"		=> $_POST['bio'],
+		"status"	=> $_POST['status']	
 		);
 
 	update_user($update_data);
@@ -97,6 +98,12 @@ if (empty($_POST) == false and empty($errors) == true) {
 			<div class="control-label">Bio:</div>
 			<div class="controls">
 				<textarea name="bio"><?php echo $user_data['bio']; ?></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="control-label">Status Message:</div>
+			<div class="controls">
+				<textarea name="status"><?php echo $user_data['status']; ?></textarea>
 			</div>
 		</div>
 		<div class="control-group">

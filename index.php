@@ -5,7 +5,7 @@
 					<!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 						<i class="icon-th-list"></i>
 					</button> -->
-					<a href="index.php" class="brand">Hangouts</a>
+					<a href="index.php" class="brand" style="font-family: Lobster;">Hangouts <p style="display: inline;">Reloaded</p></a>
 					<!-- <div class="nav-collapse collapse"> -->
 					<?php 
 						// add the "signed in" text widget
@@ -46,7 +46,16 @@
 		</div>
 	</div>
 	<div class="row-fluid">
-		
+		<div class="span10 offset2">
+			<!-- <blockquote>
+				<p>The world keep on getting more and more open. There’s going to be more information available about everything</p>
+				<small><cite>Mark Zuckerberg</cite></small>
+			</blockquote> -->
+			<blockquote>
+				<p>Reloaded. Thats what this is. We wanted a cleaner, faster, better site. Why? Because there's always room for improvement</p>
+				<small><cite>Hangouts Team</cite></small>
+			</blockquote>
+		</div>
 	</div>
 
 <?php include('includes/overall/footers/footer.php'); ?>

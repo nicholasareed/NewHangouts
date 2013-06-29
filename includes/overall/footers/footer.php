@@ -8,6 +8,7 @@
 		<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/js/script.js"></script>
+		<script type="text/javascript" src="script.js"></script>
 		<script type="text/javascript" src="assets/js/jcookies.js"></script>
 		
 	</body>

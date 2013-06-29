@@ -8,14 +8,21 @@ function avg(){
 
 function online_users() {
 	$query = mysql_query("SELECT `username`, `first_name`, `last_name` FROM `users` WHERE `online` = 1");
-	$query2 = mysql_query("SELECT COUNT(`user_id`) FROM `users` WHERE `online` = 1");
-	if (mysql_result($query2, 0) > 1) {
-		echo "<ul>";
+	$num_online = mysql_query("SELECT COUNT(`user_id`) FROM `users` WHERE `online` = 1");
+	if (mysql_result($num_online, 0) > 1) {
+		echo '<ul class="online_users">';
 			while ($user = mysql_fetch_assoc($query)) {
 				if ($user['username'] == $user_data['username']) {
 					echo "";
 				} else {
-					echo "<li>".$user['username']."</li>";
+					// $chatlink = '<li><a href="javascript:void(0)" onclick=" ';
+					// $chatlink.= "javascript:chatWith('".$user['username']."')";
+					// $chatlink.= '"';
+					// $chatlink .= ">Chat with ".$user['first_name']."</a></li>'";
+					// // echo str_replace('\'', '\\\'', $chatlink);
+					// // <a href="javascript:void(0)" onclick="javascript:chatWith('janedoe')">Chat With Jane Doe</a>
+					// // <li><a href="javascript:void(0)" onclick="javascript:chatWith("ashwin")">Chat With Ashwin</a></a></li>
+					// echo $chatlink;
 				}
 			}
 		echo "</ul>";

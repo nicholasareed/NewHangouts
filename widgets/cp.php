@@ -37,7 +37,7 @@
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#tab1" data-toggle="tab">Your Dashboard</a></li>
 				<li><a href="#tab2" data-toggle="tab">Upload New Profile Image</a></li>
-				<li><a href="#tab3" data-toggle="tab">Online Users</a></li>
+				<!-- <li><a href="#tab3" data-toggle="tab">Alpha Chat System</a></li> -->
 				<!-- <li><a href="#tab4" data-toggle="tab"></a></li> -->
 			</ul>
 			<div class="tab-content">
@@ -92,7 +92,7 @@
 				<div class="tab-pane" id="tab3">
 					<!-- <div class="well"> -->
 						<h3>Online Users</h3>
-						<?php online_users(); ?>
+						<a href="javascript:void(0)" onclick="javascript:chatWith('ashwin')">Chat Ashwin</a>
 					<!-- </div> -->	
 				</div>
 				<div class="tab-pane" id="tab4">

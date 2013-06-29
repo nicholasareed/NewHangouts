@@ -1,6 +1,7 @@
 {
 	"app-name"			: "Hangouts",
 	"version-number"		: "3.4.7",
-	"version-code-name"		: "Spartan Glory",
-	"description"			: "a small-scale app that takes the best the web has to offer"
+	"version-code-name"		: "Cookie",
+	"description"			: "a small-scale app that takes the best the web has to offer",
+	"tagline"			: "Uber-swag"
 }
