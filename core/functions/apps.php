@@ -1,8 +1,27 @@
-<?php 
-function add_comment($data) {
+<?php
 
+function request_friend($data) {
+	array_walk($data, 'clean_array');
+	// We need to know the fields we want to insert in, and their data. The instashare data array
+	// contains these. The keys are the fields and the values are the data
+	$fields	= '`'.implode('`, `', array_keys($data)).'`';
+	$data 	= "'".implode("', '", $data)."'";
+	mysql_query("INSERT INTO `friend_requests` ($fields) VALUES ($data)");
 }
 
+function num_notifications($username) {
+	$query = mysql_query("SELECT COUNT(`id`) FROM `notifications` WHERE `for` = '$username'");
+	$result = mysql_result($query, 0);
+	return $result;
+}
+
+function grab_notifications($username) {
+	$notifications = mysql_query("SELECT * FROM `notifications` WHERE `for` = '$username'");	
+	echo mysql_result($notifications, 0);
+	
+}
+
+// Debate functions
 
 function like_debate($id, $side) {
 	// Find current like for the side they back
@@ -65,7 +84,10 @@ function start_debate($data) {
 	$data 	= "'".implode("', '", $data)."'";
 	mysql_query("INSERT INTO `debates` ($fields) VALUES ($data)");
 }
-
+// Inbox Functions
+// inbox - find num/ of messages
+// mark as read - archiving messages
+// output - showing messages
 
 function inbox($username) {
 	$query = mysql_query("SELECT COUNT(`id`) FROM `messages` WHERE `to` = '$username' and `deleted` = 0 and `read` = 0");
@@ -119,6 +141,12 @@ function new_convo($data) {
 	mysql_query("INSERT INTO `messages` ($fields) VALUES ($data)");
 }
 
+// InstaShare functions: 
+// instashare - for sending messages
+// like_post - for thumb-upping posts
+// output_instashared - show all messsages
+
+
 function instashare($instashare_data) {
 	array_walk($instashare_data, 'clean_array');
 	// We need to know the fields we want to insert in, and their data. The instashare data array
@@ -160,7 +188,7 @@ function output_instashared() {
 						<div class="btn-group">
 							<a class="btn btn-primary btn-mini dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="like.php?id='.$instashare_data['id'].'">Like this post</a></li>
+								<li><span class="icon-thumbs-up"></span><a href="like.php?id='.$instashare_data['id'].'">Like this post</a></li>
 							</ul>
 						</div>
 						Likes: '.$instashare_data['likes'].'

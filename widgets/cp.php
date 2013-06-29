@@ -8,13 +8,20 @@
 					<!-- <div class="nav-collapse collapse"> -->
 					<div class="navbar-text dropdown pull-right">
 						<!-- <p class="navbar-text pull-right">						 -->
-							<a class="dropdown-toogle" data-toggle="dropdown">[first-name] [last-name]</a>
+						Signed in as
+							<a class="dropdown-toggle" data-toggle="dropdown">[first-name] [last-name]</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dlabel">
 								<li><a href="http://localhost/Hangouts/[username]" title="Click to view your profile">View Profile</a></li>
 								<li><a href="sign-out.php">Sign Out</a></li>
 							</ul>
 						<!-- </p> -->
 					</div>
+					<!-- <div class="navbar-text pull-right">
+						<span class="icon-bell"></span>
+						<div class="notifications">
+							<?php # echo num_notifications($user_data['username']); ?>		
+						</div>
+					</div> -->
 					<ul class="nav pull-left">
 						<li><a href="index.php">Home</a></li>
 						<li class="active"><a href="dashboard.php">Dashboard</a></li>
@@ -31,6 +38,7 @@
 				<li class="active"><a href="#tab1" data-toggle="tab">Your Dashboard</a></li>
 				<li><a href="#tab2" data-toggle="tab">Upload New Profile Image</a></li>
 				<li><a href="#tab3" data-toggle="tab">Online Users</a></li>
+				<!-- <li><a href="#tab4" data-toggle="tab"></a></li> -->
 			</ul>
 			<div class="tab-content">
 				<div class="tab-pane active" id="tab1">
@@ -55,6 +63,7 @@
 							if (in_array($file_extn, $allowed) == true) {
 								$id = "[id]";
 								change_profile_image($id, $file_temp, $file_extn);
+								?><script type="text/javascript" charset="utf-8" async defer>window.location.replace("dashboard.php");</script><?php
 							} else{
 								echo alert_message('Incorrect file type. Allowed file types are: '.implode(', ', $allowed), 'error');
 							}
@@ -76,7 +85,7 @@
 				 	</ul> -->
 					<button type="submit" class="btn btn-primary btn-small">Update</button>
 				</form>
-
+				<p>You can see your profile picture at the bottom of the quickbar</p>
 			</div>
 			<!-- </div> -->
 				</div>
@@ -85,6 +94,9 @@
 						<h3>Online Users</h3>
 						<?php online_users(); ?>
 					<!-- </div> -->	
+				</div>
+				<div class="tab-pane" id="tab4">
+					
 				</div>
 			</div>
 			

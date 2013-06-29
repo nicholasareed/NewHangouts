@@ -1,6 +1,6 @@
 <div class="well">
 		[first-name] [last-name]'s profile page <br>
-		<!-- <a class="btn btn-primary" href="friend.php?friend=[username]">Send Friend Request</a> -->
+		<a class="btn btn-primary" href="befriend.php?friend=[username]">Send Friend Request</a>
 	</div>
 <div class="row-fluid">
 	<div class="span6">

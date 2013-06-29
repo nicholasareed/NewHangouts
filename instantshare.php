@@ -16,6 +16,9 @@ if (isset($_POST['message'])) {
 		// "tags" 			=> $tags
 		);
 		instashare($instashare_data);
+		?>
+		<!-- Stop Form Spamming -->
+		<script type="text/javascript" charset="utf-8" async defer>window.location.replace("instantshare.php");</script><?php
 	} else{
 		output_errors($errors);
 	}

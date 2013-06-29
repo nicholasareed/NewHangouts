@@ -29,7 +29,7 @@
 				<?php include('widgets/total-users.php'); ?>
 			</div>
 			<div class="well sidebar-nav">
-				<a href="#myModal" data-toggle="modal">Sign In</a>
+				<a href="#myModal" data-toggle="modal">Quick 	Sign In</a>
 				<?php include('quick-sign-in.php'); ?>
 			</div>
 			<?php

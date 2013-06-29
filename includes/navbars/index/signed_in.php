@@ -1,5 +1,6 @@
 <div class="navbar-text dropdown pull-right">
 						<!-- <p class="navbar-text pull-right">						 -->
+						Signed in as
 							<a class="dropdown-toogle" data-toggle="dropdown"><?php echo $user_data['first_name'].' '.$user_data['last_name']; ?></a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dlabel">
 								<li><a href="http://localhost/Hangouts/[username]" title="Click to view your profile">View Profile</a></li>
