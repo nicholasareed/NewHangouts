@@ -60,11 +60,11 @@
 				$register_data = array(
 					'username' 		=> $_POST['username'],
 					'password' 		=> encrypt($_POST['password']),
-					'first_name' 	=> $_POST['first-name'],
-					'last_name' 	=> $_POST['last-name'],
-					'email' 		=> $_POST['email'],
-					"email_code"	=> md5($_POST['username'] + microtime()),
-					"timestamp"	=> time()
+					'first_name' 		=> $_POST['first-name'],
+					'last_name' 		=> $_POST['last-name'],
+					'email' 			=> $_POST['email'],
+					"email_code"		=> md5($_POST['username'] + microtime() + uniqid()),
+					"timestamp"		=> time()
 					);
 				register($register_data);
 				header('Location: index.php');
@@ -80,7 +80,7 @@
 					<div class="control-group">
 						<div class="control-label"><label for="">Username:</label></div>
 						<div class="controls">
-							<input value="<?php if (isset($_POST['username'])) {echo $_POST['username'];}?>" required type="text" name="username" maxlength="32">
+							<input value="<?php if (isset($_POST['username'])) {echo $_POST['username'];}?>" required type="text" name="username" maxlength="32" pattern="^[a-zA-Z0-9_]*$" title="Only uppercase, lowercase, numbers and underscores" min="1">
 						</div>
 					</div>
 					<div class="control-group">

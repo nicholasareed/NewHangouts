@@ -5,7 +5,7 @@
 					<!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 						<i class="icon-th-list"></i>
 					</button> -->
-					<a href="index.php" class="brand" style="font-family: Lobster;">Hangouts <p style="display: inline;">Reloaded</p></a>
+					<a href="index.php" class="brand">Hangouts</a>
 					<!-- <div class="nav-collapse collapse"> -->
 					<?php 
 						// add the "signed in" text widget
@@ -52,8 +52,10 @@
 				<small><cite>Mark Zuckerberg</cite></small>
 			</blockquote> -->
 			<blockquote>
-				<p>Reloaded. Thats what this is. We wanted a cleaner, faster, better site. Why? Because there's always room for improvement</p>
-				<small><cite>Hangouts Team</cite></small>
+				<p>Reloaded. Thats what this is. We wanted a cleaner, faster, better site. Why? Because there's always room for improvement. Because coding never ends. There is never an end goal. You can always go further, above and beyond</p>
+				<small>
+					<cite>Hangouts Team</cite>
+				</small>
 			</blockquote>
 		</div>
 	</div>

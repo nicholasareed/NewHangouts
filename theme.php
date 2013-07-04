@@ -10,10 +10,11 @@ if (signed_in() == true) {
 		if ($user_theme == "nightwing") {
 			add_stylesheet("assets/css/bootswatch/nightwing.css");
 		}
-		add_stylesheet("//netdna.bootstrapcdn.com/bootswatch/2.3.2/".$user_theme."/bootstrap.min.css");
+		// add_stylesheet("//netdna.bootstrapcdn.com/bootswatch/2.3.2/".$user_theme."/bootstrap.min.css");
+		add_stylesheet("assets/css/bootswatch/".$user_theme.".css");
 	}
 } else{
 	// add_stylesheet("assets/css/bootstrap.min.css");
-	add_stylesheet("//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css");
+	add_stylesheet("assets/css/bootstrap.min.css");
 }
  ?>

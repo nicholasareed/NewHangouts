@@ -1,10 +1,10 @@
-	<form action="dashboard.php?first-time=yes" method="post" class="form-horizontal">
+	<form action="dashboard.php?first-time=yes" method="post" class="form-horizontal" autocomplete="on">
 		<fieldset>
 			<!-- <legend>Sign In </legend> -->
 			<div class="control-group">
 				<div class="control-label"><label for="">Username:</label></div>
 				<div class="controls">
-					<input type="text" name="username" required>
+					<input type="text" name="username" required autofocus>
 				</div>
 			</div>
 			<div class="control-group">

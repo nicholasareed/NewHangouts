@@ -25,11 +25,18 @@
 					<ul class="thumbnails">			  			
 			  			<li class="span3">
 			  				<div class="thumbnail">
-			  					<h3>Beta Clock</h3>
+			  					<h3>Clock</h3>
 			  					<p>A simple digital clock, with an alarm feature</p>
 			  					<a href="clock.php" class="btn">Visit</a>
 			  				</div>
 			  			</li>
+			  			<!-- <li class="span3">
+			  				<div class="thumbnail">
+			  					<h3>Weather Forecast</h3>
+			  					<p>A very simple weather forecaster powered by <a href="http://openweathermap.org" target="_blank">Open Weather Map</a></p>
+			  					<a href="forecast.php" class="btn">Visit</a>
+			  				</div>
+			  			</li> -->
 					</ul>
 				</div>
 			</div>

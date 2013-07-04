@@ -15,8 +15,8 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/custom/form.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="assets/css/custom/html.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="assets/css/chat.css" media="screen">
-		<link href="assets/css/style.css" rel="stylesheet" />
-		<!-- <link href="styles.css" rel="stylesheet" /> -->
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+		<!-- <link href="styles.css" rel="stylesheet" type="text/css"/> -->
 		<!-- Google Font API for Oxygen, a sans-serif font -->
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
